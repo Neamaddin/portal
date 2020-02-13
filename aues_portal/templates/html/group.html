@@ -1,0 +1,29 @@
+{% extends 'html/main.html' %}
+{% block content %}
+  <div class="card-body">
+	<div class="card text-center">
+	  <div class="card-header">
+	    <h2><span class="badge badge-light"><p class="card-text">{{group.name}}</p></span></h2>
+	  </div>
+	  <div class="card-body">
+	  	<h5 class="card-title">Эдвайзер: <a href="{% url 'teacher' group.group_adviser.id %}">{{group.group_adviser}}</a></h5>
+		<table class="table">
+		  <thead class="thead-light">
+		    <tr>
+		      <th scope="col">Ф.И.О.</th>
+		      <th scope="col">Личная страница</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+			{% for stud in students %}
+			    <tr>
+			      <td>{{stud.surname}} {{stud.name}} {{stud.patronymic}}</td>
+			      <td><a href="{% url 'student' stud.id %}" class="badge badge-info"><h6>перейти</h6></a></td>
+			    </tr>
+			{% endfor %}
+		  </tbody>
+		</table>
+	  </div>
+	</div>
+  </div>
+{% endblock %}

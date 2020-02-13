@@ -1,0 +1,105 @@
+{% extends 'html/main.html' %}
+{% block content %}
+<div class="card">
+  <div class="card-body">
+	<div class="media">
+	  <div class="col-sm-2">
+		<div class="card">
+		  <div class="card-body">
+		    <img class="card-img-top" src="{{request.user.teacher.image.url}}">
+		  </div>
+		</div>
+	  </div>
+	  <form method="POST" action="" enctype="multipart/form-data">
+	  	{% csrf_token %}
+	  <div class="media-body">
+		<dl class="row">
+		  {% if form.surname.errors %}
+		    <dt class="col-sm-2 text-truncate"></dt>
+		    <dd class="col-sm-10">{{form.surname.errors}}</dd>
+		  {% endif %}
+		  <dt class="col-sm-2 text-truncate">Фамилия</dt>
+		  <dd class="col-sm-10"><textarea name="surname" class="form-control" rows="1">{{request.user.teacher.surname}}</textarea></dd>
+		  {% if form.name.errors %}
+		    <dt class="col-sm-2 text-truncate"></dt>
+		    <dd class="col-sm-10">{{form.name.errors}}</dd>
+		  {% endif %}
+		  <dt class="col-sm-2 text-truncate">Имя</dt>
+		  <dd class="col-sm-10"><textarea name="name" class="form-control" rows="1">{{request.user.teacher.name}}</textarea></dd>
+		  {% if form.patronymic.errors %}
+		    <dt class="col-sm-2 text-truncate"></dt>
+		    <dd class="col-sm-10">{{form.patronymic.errors}}</dd>
+		  {% endif %}
+		  <dt class="col-sm-2 text-truncate">Отчество</dt>
+		  <dd class="col-sm-10"><textarea name="patronymic" class="form-control" rows="1">{{request.user.teacher.patronymic}}</textarea></dd>
+		  {% if form.post.errors %}
+		    <dt class="col-sm-2 text-truncate"></dt>
+		    <dd class="col-sm-10">{{form.post.errors}}</dd>
+		  {% endif %}
+		  <dt class="col-sm-2 text-truncate">Должность</dt>
+		  <dd class="col-sm-10"><textarea name="post" class="form-control" rows="1">{{request.user.teacher.post}}</textarea></dd>
+		  {% if form.phone.errors %}
+		    <dt class="col-sm-2 text-truncate"></dt>
+		    <dd class="col-sm-10">{{form.phone.errors}}</dd>
+		  {% endif %}
+		  <dt class="col-sm-2 text-truncate">Телефон</dt>
+		  <dd class="col-sm-10"><textarea name="phone" class="form-control" rows="1">{{request.user.teacher.phone}}</textarea></dd>
+		  {% if form.email.errors %}
+		    <dt class="col-sm-2 text-truncate"></dt>
+		    <dd class="col-sm-10">{{form.email.errors}}</dd>
+		  {% endif %}
+		  <dt class="col-sm-2 text-truncate">Почта</dt>
+		  <dd class="col-sm-10"><textarea name="email" class="form-control" rows="1">{{request.user.teacher.email}}</textarea></dd>
+		  {% if form.image.errors %}
+		    <dt class="col-sm-2 text-truncate"></dt>
+		    <dd class="col-sm-10">{{form.image.errors}}</dd>
+		  {% endif %}
+		  <dt class="col-sm-11 text-truncate">
+			  <dl class="row">
+			    <dt class="col-sm-9">
+			      <dl class="row">
+			        <dt class="col-sm-3">Выбрать новое изображение</dt>
+			    	<dd class="col-sm-9">
+			      	  <div class="form-group">
+						<input name="image" accept="image/*" type="file" class="form-control-file">
+				  	  </div>
+			    	</dd>
+			      </dl>
+			    </dt>
+			    <dd class="col-sm-3">
+			      <a class="btn btn-primary" href="{% url 'documents' %}" role="button">Изменить список документов</a>
+			    </dd>
+			  </dl>
+			</dt>
+		  <dd class="col-sm-1"><button type="submit" class="btn btn-success" nama="Update Information">Сохранить</button></dd>
+		</dl>
+	 </div>
+	</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+  	<div class="form-group">
+      <label for="exampleFormControlTextarea1">Резюме</label>
+      <textarea name="rezume" class="form-control" rows="7">{{request.user.teacher.rezume}}</textarea>
+	</div>
+	<div class="form-group">
+      <label for="exampleFormControlTextarea1">Образование</label>
+      <textarea name="education" class="form-control" rows="7">{{request.user.teacher.education}}</textarea>
+	</div>
+	<div class="form-group">
+      <label for="exampleFormControlTextarea1">Повышение квалификации</label>
+      <textarea name="qualification_up" class="form-control" rows="7">{{request.user.teacher.qualification_up}}</textarea>
+	</div>
+	<div class="form-group">
+      <label for="exampleFormControlTextarea1">Научные статьи</label>
+      <textarea name="science_articles" class="form-control" rows="7">{{request.user.teacher.science_articles}}</textarea>
+	</div>
+	<div class="form-group">
+      <label for="exampleFormControlTextarea1">Награды</label>
+      <textarea name="аwards" class="form-control" rows="7">{{request.user.teacher.аwards}}</textarea>
+	</div>
+  </div>
+</div>
+</form>
+{% endblock %}

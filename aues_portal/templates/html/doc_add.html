@@ -1,0 +1,42 @@
+{% extends 'html/main.html' %}
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<input type="hidden" name="doc_name" required value="{{request.user.teacher.id}}">
+	<div class="card">
+	  <div class="card-body">
+			<dl class="row">
+				<dt class="col-sm-3">
+			  		Описание документа
+				</dt>
+				<dd class="col-sm-9">
+					<textarea name="name" class="form-control" rows="1"></textarea>
+				</dd>
+				<dt class="col-sm-3">
+			  	Тип документа
+			  </dt>
+				<dd class="col-sm-9">
+					<select name="category" required class="custom-select my-1 mr-sm-2">
+						<option value="" selected>-----------</option>
+						<option value="document">Документ(Дипломы)</option>
+						<option value="sertificat">Скан сертификатов(повышение квалификации)</option>
+					  	<option value="article">Оттиск из статьи</option>
+					  	<option value="award">Награды</option>
+				  </select>
+				</dd>
+	        	<dt class="col-sm-3">Выбрать документ</dt>
+		    	<dd class="col-sm-9">
+	    		<dl class="row">
+			      <dt class="col-sm-10">
+		        	<input type="file" name="file" class="form-control-file">
+			      </dt>
+					<dd class="col-sm-2">
+		      	  	  <button type="submit" class="btn btn-success" nama="Submit">Сохранить</button>
+		    	  </dd>
+			    </dl>
+	    	</dd>
+			</dl>
+		</div>
+	</div>
+</form>
+{% endblock %}

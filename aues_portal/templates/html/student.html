@@ -1,0 +1,15 @@
+{% extends 'html/main.html' %}
+{% block content %}
+<table class="table">
+	<tr>
+		<th>Имя</th>
+		<th>Фамилия</th>
+		<th>Группа</th>
+	</tr>
+		<tr>
+			<td>{{student.name}}</td>
+			<td>{{student.surname}}</td>
+			<td>{{student.group}}</td>
+		</tr>
+</table>
+{% endblock %}

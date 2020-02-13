@@ -1,0 +1,22 @@
+{% extends 'html/main.html' %}s
+{% block content %}
+	{% for inst in instituts %}
+	<div class="card">
+	  <div class="card-body">
+		<div class="card text-center">
+		  <div class="card-header">
+		    <a href="{% url 'institut' inst.url_name %}" class="badge badge-info"><h1>{{inst.name}}</h1></a>
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">Информация</h5>
+		    <p class="card-text">
+		      <p class="text-justify">
+		    	{{inst.info}}
+			  </p>
+			</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	{% endfor %}
+{% endblock %}

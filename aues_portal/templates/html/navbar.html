@@ -1,0 +1,54 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img id="logo" src="{% static 'images/log.png' %}">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {% if request.resolver_match.url_name == 'home' %}
+        <li class="nav-item active">
+      {% endif %}
+        <a class="nav-link" href="{% url 'home' %}">Главная</a>
+      </li>
+      {% if request.resolver_match.url_name == 'instituts' %}
+        <li class="nav-item active">
+      {% endif %}
+        <a class="nav-link" href="{% url 'instituts' %}">Институты</a>
+      </li>
+      {% if request.resolver_match.url_name == 'departments' %}
+        <li class="nav-item active">
+      {% endif %}
+        <a class="nav-link" href="{% url 'departments' %}">Кафедры</a>
+      </li>
+      {% if request.resolver_match.url_name == 'teachers' %}
+        <li class="nav-item active">
+      {% endif %}
+        <a class="nav-link" href="{% url 'teachers' %}">Преподавательский состав</a>
+      </li>
+      {% if request.user.is_authenticated %}
+        {% if request.resolver_match.url_name == 'groups' %}
+          <li class="nav-item active">
+        {% endif %}
+          <a class="nav-link" href="{% url 'groups' %}">Список групп</a>
+          </li>
+      {% endif %}
+      {% if request.user.is_authenticated %}
+        {% if request.resolver_match.url_name == 'user' %}
+          <li class="nav-item active">
+        {% endif %}
+          <a class="nav-link" href="{% url 'user' %}">Мой профиль</a>
+          </li>
+      {% endif %}
+    </ul>
+    <span class="form-inline my-2 my-lg-0">
+      {% if request.user.is_authenticated %}
+        <span id = "hellow-msg" class="navbar-text mr-sm-2">Вы авторизованы как {{request.user}}</span>
+        <span id = "hellow-msg" class="navbar-text my-2 my-sm-0"><a class="nav-link" href="{% url 'logout' %}">Выйти</a></span>
+        {% else %}
+        <span id = "hellow-msg" class="navbar-text mr-sm-2">Вы авторизованы как Гость</span>
+        <span id = "hellow-msg" class="navbar-text my-2 my-sm-0"><a class="nav-link" href="{% url 'login' %}">Войти</a></span>
+      {% endif %}
+    </span>
+  </div>
+</nav>

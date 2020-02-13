@@ -1,0 +1,24 @@
+{% extends 'html/main.html' %}
+{% block content %}
+	<div class="card">
+	  <div class="card-body">
+		<div class="card text-center">
+		  <div class="card-header">
+		    <span class="badge badge-info"><h1>{{institut.name}}</h1></span>
+		  </div>
+		  <div class="card-body">
+		  	<h5 class="card-title">Кафедры института</h5>
+		  	{% for urls in departments %}
+		  	  <p class="text-left">
+				<h2>
+			  	  <a href="{% url 'department' urls.url_name %}" class="badge badge-light">
+		  			{{urls.name}}
+				  </a>
+				</h2>
+			  </p>
+		    {% endfor %}
+		  </div>
+		</div>
+	  </div>
+	</div>
+{% endblock %}

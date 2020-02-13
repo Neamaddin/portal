@@ -1,0 +1,28 @@
+#hellow-msg{
+font-size: 18px;
+color: #fff;
+}
+#logo{
+max-width: 350px;
+}
+#Red{
+background-color: red;
+border: 10px;
+color: white;
+padding: 3px 7px;
+text-decoration: none;
+cursor: pointer;
+}
+.errorlist{
+list-style-type: none;
+margin: 0;
+padding: 10px;
+color: #721c24;
+background-color: #f5c6cb;
+}
+#messages{
+	background-color: grey;
+	color: #fff;
+	padding: 10px;
+	margin-top: 10px;
+}
