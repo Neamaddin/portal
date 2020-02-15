@@ -19,9 +19,7 @@ six==1.12.0
 traitlets==4.3.2
 urllib3==1.25.6
 wcwidth==0.1.7
-asgiref=3.2.3
 Django==3.0.3
-django-filter==2.2.O
 Pillow==7.0.0
 pytz==2019.3
 sqlparse==0.3.0
