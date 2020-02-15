@@ -1,0 +1,79 @@
+{% extends 'html/main.html' %}
+{% block content %}
+{% for inst in instituts %}
+	<div class="card">
+	  <div class="card-body">
+		<div class="card text-center">
+		  <div class="card-header">
+		    <a href="{% url 'institut' inst.url_name %}" class="badge badge-info"><h1>{{inst.name}}</h1></a>
+			  	{% for depar in departments %}
+					  {% if inst.id == depar.institute_id %}
+				  		{% if depar.release %}
+							  <div class="card-body">
+									<div class="card text-center">
+									  <div class="card-header">
+									    <h2><a href="{% url 'department' depar.url_name %}" class="badge badge-light"><p class="card-text">{{depar.name}}</p></a></h2>
+									  </div>
+									  <div class="card-body">
+									  	<div class="row">
+									    	<div class="col-sm-3">
+													<div class="card">
+														<div class="card-body">
+															<h5 class="card-title">Группы с первым курсом обучения</h5>
+															{% for group in groups %}
+																{% if group.studyYear == 1 %}
+																	<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>
+																{% endif %}
+															{% endfor %}
+														</div>
+													</div>
+										    </div>
+										    <div class="col-sm-3">
+													<div class="card">
+														<div class="card-body">
+															<h5 class="card-title">Группы со вторым курсом обучения</h5>
+															{% for group in groups %}
+																{% if group.studyYear == 2 %}
+																	<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>
+																{% endif %}
+															{% endfor %}
+														</div>
+													</div>
+										    </div>
+										    <div class="col-sm-3">
+													<div class="card">
+														<div class="card-body">
+															<h5 class="card-title">Группы с третьим курсом обучения</h5>
+															{% for group in groups %}
+																{% if group.studyYear == 3 %}
+																	<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>
+																{% endif %}
+															{% endfor %}
+														</div>
+													</div>
+										    </div>
+										    <div class="col-sm-3">
+													<div class="card">
+														<div class="card-body">
+															<h5 class="card-title">Группы с четвертым курсом обучения</h5>
+															{% for group in groups %}
+																{% if group.studyYear == 4 %}
+																	<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>
+																{% endif %}
+															{% endfor %}
+														</div>
+													</div>
+									    	</div>
+								    	</div>
+									  </div>
+									</div>
+							  </div>
+							{% endif %}
+						{% endif %}		  	  
+					{% endfor %}
+			  </div>
+			</div>
+	  </div>
+	</div>
+{% endfor %}
+{% endblock %}
