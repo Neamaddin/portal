@@ -1,12 +1,13 @@
 {% extends 'html/main.html' %}
 {% block content %}
+{% load static %}
 <div class="card">
   <div class="card-body">
 	<div class="media">
 	  <div class="col-sm-2">
 		<div class="card">
 		  <div class="card-body">
-		    <img class="card-img-top" src="{{request.user.teacher.image.url}}">
+		    <img class="card-img-top" src="{% static '' %}{{request.user.teacher.image.url}}?hl=ru">
 		  </div>
 		</div>
 	  </div>

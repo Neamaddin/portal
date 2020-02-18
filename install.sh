@@ -9,6 +9,8 @@ read -p "Your domain without protocol (for example, google.com): " project_domai
 source env/bin/activate
 pip install -U pip
 pip install -r requirements.txt
+pip install django-filter
+pip install django-filters
 
 sed -i "s~dbms_template_path~$project_path~g" nginx/site.conf systemd/gunicorn.service
 sed -i "s~dbms_template_domain~$project_domain~g" nginx/site.conf src/config/settings.py
