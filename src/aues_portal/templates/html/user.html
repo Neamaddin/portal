@@ -7,7 +7,7 @@
 	  <div class="col-sm-2">
 		<div class="card">
 		  <div class="card-body">
-		    <img class="card-img-top" src="{% static '' %}{{request.user.teacher.image.url}}?hl=ru">
+		    <img class="card-img-top" src="{{request.user.teacher.image.url}}">
 		  </div>
 		</div>
 	  </div>
@@ -74,7 +74,7 @@
 			</dt>
 		  <dd class="col-sm-1"><button type="submit" class="btn btn-success" nama="Update Information">Сохранить</button></dd>
 		</dl>
-	 </div>
+	  </div>
 	</div>
   </div>
 </div>

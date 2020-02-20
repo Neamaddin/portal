@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+from google.oauth2 import service_account
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -19,12 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 
+SECRET_KEY = '9c9m7h_lbzh&g35y#(4rsr9g^w^b6r(^rirt9q)m)#5t=@-+tm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dbms_template_domain']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -118,12 +118,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = 'https://storage.cloud.google.com/aupet-bucket/static/'
+STATIC_URL = 'https://storage.cloud.google.com/aupet-static/static/'
 
-MEDIA_URL = '/images/'
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+GS_PROJECT_ID = 'zinc-wares-268011'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+GS_BUCKET_NAME = 'aupet-media'
+
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file('media.json')

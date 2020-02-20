@@ -27,7 +27,6 @@ class Department(models.Model):
 	info = models.TextField("Информация о кафедре", blank = True)
 	release = models.BooleanField("Выпуск групп")
 
-
 	class Meta:
 		verbose_name = "Кафедра"
 		verbose_name_plural = "Кафедры"
@@ -41,7 +40,7 @@ class Teacher(models.Model):
 	name = models.CharField("Имя", max_length = 20)
 	surname = models.CharField("Фамилия", max_length = 20)
 	patronymic = models.CharField("Отчество", max_length = 20)
-	image = models.ImageField("Фотография", default = "Prof.png", blank = True, upload_to = "Teachers/")
+	image = models.ImageField("Фотография", default = "Prof.png", blank = True, upload_to = "images/")
 	rezume = models.TextField("Резюме", blank = True)
 	phone = models.CharField("Телефон", max_length = 12, blank = True)
 	email = models.EmailField("Почта", max_length=254, blank = True)
@@ -69,7 +68,7 @@ class Document(models.Model):
 	name = models.TextField("Описание документа")
 	doc_name = models.ForeignKey(Teacher, verbose_name = "Кому принадлежит докумет", on_delete = models.CASCADE, related_query_name = "document_name")
 	category = models.CharField("Категория", max_length = 10, choices = CATEGORY)
-	file = models.FileField("Документ", upload_to = "Teachers/Documents/", validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
+	file = models.FileField("Документ", upload_to = 'Documents/' , validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
 	
 	class Meta:
 		verbose_name = "Документ"
