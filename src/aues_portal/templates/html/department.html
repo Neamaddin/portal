@@ -1,4 +1,5 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% block content %}
 <div class="card">
   <div class="card-body">
@@ -13,7 +14,7 @@
 	  			<p class="card-text">{{department.info}}</p>
 		    </div>
 		    <div class="col-sm-3">
-		    	<h5 class="card-title">Список преподавателей кафедры</h5>
+		    	<h5 class="card-title">{% trans "Список преподавателей кафедры" %}</h5>
 	  			<p class="card-text">
 	  				{% for i in teachers %}
 	  				<p class="card-text">
@@ -37,7 +38,7 @@
 			  <div class="card-header" id="headingTwo">
 			    <h5 class="mb-0">
 			      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-			        Список групп кафедры {{department.short_name}}
+			      	{% blocktrans with depar=department.short_name %}Список групп кафедры {{depar}}{% endblocktrans %}
 			      </button>
 			    </h5>
 			  </div>
@@ -47,7 +48,7 @@
 				    	<div class="col-sm-3">
 								<div class="card">
 									<div class="card-body">
-										<h5 class="card-title">Группы с первым курсом обучения</h5>
+										<h5 class="card-title">{% trans "Группы с первым курсом обучения" %}</h5>
 										{% for group in groups %}
 											{% if group.studyYear == 1 %}
 												<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>
@@ -59,7 +60,7 @@
 					    <div class="col-sm-3">
 								<div class="card">
 									<div class="card-body">
-										<h5 class="card-title">Группы со вторым курсом обучения</h5>
+										<h5 class="card-title">{% trans "Группы со вторым курсом обучения" %}</h5>
 										{% for group in groups %}
 											{% if group.studyYear == 2 %}
 												<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>
@@ -71,7 +72,7 @@
 					    <div class="col-sm-3">
 								<div class="card">
 									<div class="card-body">
-										<h5 class="card-title">Группы с третьим курсом обучения</h5>
+										<h5 class="card-title">{% trans "Группы с третьим курсом обучения" %}</h5>
 										{% for group in groups %}
 											{% if group.studyYear == 3 %}
 												<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>
@@ -83,7 +84,7 @@
 					    <div class="col-sm-3">
 								<div class="card">
 									<div class="card-body">
-										<h5 class="card-title">Группы с четвертым курсом обучения</h5>
+										<h5 class="card-title">{% trans "Группы с четвертым курсом обучения" %}</h5>
 										{% for group in groups %}
 											{% if group.studyYear == 4 %}
 												<a href="{% url 'group' group.id %}" class="btn btn-primary">{{group.name}}</a>

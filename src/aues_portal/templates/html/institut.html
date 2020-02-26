@@ -1,4 +1,5 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% block content %}
 	<div class="card">
 	  <div class="card-body">
@@ -7,7 +8,7 @@
 		    <span class="badge badge-info"><h1>{{institut.name}}</h1></span>
 		  </div>
 		  <div class="card-body">
-		  	<h5 class="card-title">Кафедры института</h5>
+		  	<h5 class="card-title">{% trans "Кафедры института" %}</h5>
 		  	{% for urls in departments %}
 		  	  <p class="text-left">
 				<h2>

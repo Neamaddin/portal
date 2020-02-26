@@ -1,4 +1,5 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% block content %}
 {% for inst in instituts %}
 	<div class="card">
@@ -17,9 +18,9 @@
 						<table class="table">
 						  <thead class="thead-light">
 						    <tr>
-						      <th scope="col">Ф.И.О.</th>
-						      <th scope="col">Должность</th>
-						      <th scope="col">Личная страница</th>
+						      <th scope="col">{% trans 'Ф.И.О.' %}</th>
+						      <th scope="col">{% trans 'Должность' %}</th>
+						      <th scope="col">{% trans 'Личная страница' %}</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -28,7 +29,7 @@
 							    <tr>
 							      <td>{{teacher.surname}} {{teacher.name}} {{teacher.patronymic}}</td>
 							      <td>{{teacher.post}}</td>
-							      <td><a href="{% url 'teacher' teacher.id %}" class="badge badge-info"><h6>перейти</h6></a></td>
+							      <td><a href="{% url 'teacher' teacher.id %}" class="badge badge-info"><h6>{% trans 'перейти' %}</h6></a></td>
 							    </tr>
 						      {% endif %}
 							{% endfor %}

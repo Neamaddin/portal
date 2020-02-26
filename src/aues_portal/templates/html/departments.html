@@ -1,5 +1,5 @@
 {% extends 'html/main.html' %}
-
+{% load i18n %}
 {% block content %}
 {% for insti in instituts %}
 	<div class="card">
@@ -9,7 +9,7 @@
 		    <a href="{% url 'institut' insti.url_name %}" class="badge badge-info"><h1>{{insti.name}}</h1></a>
 		  </div>
 		  <div class="card-body">
-		  	<h3><h5 class="card-title">Кафедры института</h5></h3>
+		  	<h3><h5 class="card-title">{% trans "Кафедры института" %}</h5></h3>
 		  	{% for depar in departments %}
 		  	  {% if insti.id == depar.institute_id %}
 				<h2><a href="{% url 'department' depar.url_name %}" class="badge badge-light"><p class="card-text">{{depar.name}}</p></a></h2>

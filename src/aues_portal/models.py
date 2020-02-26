@@ -117,7 +117,6 @@ class Student(models.Model):
 	surname = models.CharField("Фамилия", max_length = 20)
 	patronymic = models.CharField("Отчество", max_length = 20)
 	group = models.ForeignKey(Group, verbose_name = "Группа", on_delete = models.CASCADE, related_query_name = "group")
-	age = models.PositiveSmallIntegerField("Возраст", default = 0)
 
 	class Meta:
 		verbose_name = "Студент"

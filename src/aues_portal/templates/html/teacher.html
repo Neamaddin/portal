@@ -1,4 +1,5 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% load static %}
 {% block content %}
 <div class="card">
@@ -13,16 +14,16 @@
 	  </div>
 	  <div class="media-body">
 		<dl class="row">
-		  <dt class="col-sm-3">Ф.И.О.</dt>
+		  <dt class="col-sm-3">{% trans 'Ф.И.О.' %}</dt>
 		  <dd class="col-sm-9">{{teacher.surname}} {{teacher.name}} {{teacher.patronymic}}</dd>
 
-		  <dt class="col-sm-3">Должность</dt>
+		  <dt class="col-sm-3">{% trans 'Должность' %}</dt>
 		  <dd class="col-sm-9">{{teacher.post}}</dd>
 
-		  <dt class="col-sm-3">Телефон</dt>
+		  <dt class="col-sm-3">{% trans 'Телефон' %}</dt>
 		  <dd class="col-sm-9">{{teacher.phone}}</dd>
 
-		  <dt class="col-sm-3 text-truncate">Почта</dt>
+		  <dt class="col-sm-3 text-truncate">{% trans 'Почта' %}</dt>
 		  <dd class="col-sm-9">{{teacher.email}}</dd>
 		</dl>
 	 </div>
@@ -37,7 +38,7 @@
 			  <div class="card-header" id="headingOne">
 			    <h5 class="mb-0">
 			      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-			        Резюме
+			        {% trans 'Резюме' %}
 			      </button>
 			    </h5>
 			  </div>
@@ -53,7 +54,7 @@
 		    <div class="card-header" id="headingTwo">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-		          Образование
+		          {% trans 'Образование' %}
 		        </button>
 		      </h5>
 		    </div>
@@ -63,7 +64,7 @@
 		        {% if request.user.is_authenticated %}
 		          <div class="card text-center">
 					  <div class="card-header">
-					    Сканы дипломов
+					    {% trans 'Сканы дипломов' %}
 					  </div>
 					  <div class="card-body">
 					  	{% for d in doc %}
@@ -83,7 +84,7 @@
 		    <div class="card-header" id="headingThree">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-		          Повышение квалификации
+		          {% trans 'Повышение квалификации' %}
 		        </button>
 		      </h5>
 		    </div>
@@ -93,7 +94,7 @@
 		        {% if request.user.is_authenticated %}
 		          <div class="card text-center">
 					  <div class="card-header">
-					    Сканы сертификатов
+					    {% trans 'Сканы сертификатов' %}
 					  </div>
 					  <div class="card-body">
 					  	{% for d in doc %}
@@ -113,7 +114,7 @@
 		    <div class="card-header" id="headingFour">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-		          Научные статьи
+		          {% trans 'Научные статьи' %}
 		        </button>
 		      </h5>
 		    </div>
@@ -123,7 +124,7 @@
 		        {% if request.user.is_authenticated %}
 		          <div class="card text-center">
 					  <div class="card-header">
-					    Оттиски статей
+					    {% trans 'Оттиски статей' %}
 					  </div>
 					  <div class="card-body">
 					  	{% for d in doc %}
@@ -143,7 +144,7 @@
 		    <div class="card-header" id="headingFive">
 		      <h5 class="mb-0">
 		        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-		          Награды
+		          {% trans 'Награды' %}
 		        </button>
 		      </h5>
 		    </div>
@@ -152,9 +153,7 @@
 		        {{teacher.аwards}}
 		        {% if request.user.is_authenticated %}
 		          <div class="card text-center">
-					  <div class="card-header">
-					    Прочие заслуги
-					  </div>
+					<div class="card-header">{% trans 'Прочие заслуги' %}</div>
 					  <div class="card-body">
 					  	{% for d in doc %}
 					  	  {% if d.category == 'award' %}

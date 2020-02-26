@@ -1,38 +1,51 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	{% if request.resolver_match.url_name == 'home' %}
-	    <title>Главная страница</title>
+		<title>{% trans "Главная страница" %}</title>
 	{% elif request.resolver_match.url_name == 'instituts' %}
-	    <title>Институты</title>
+		<title>{% trans "Институты" %}</title>
 	{% elif request.resolver_match.url_name == 'departments' %}
-	    <title>Кафедры</title>
-    {% elif request.resolver_match.url_name == 'teachers' %}
-	    <title>Преподавательский состав</title>
+		<title>{% trans "Кафедры" %}</title>
+	{% elif request.resolver_match.url_name == 'department' %}
+		<title>{% trans "Страница кафедры" %}</title>
+	{% elif request.resolver_match.url_name == 'teachers' %}
+		<title>{% trans "Преподавательский состав" %}</title>
 	{% elif request.resolver_match.url_name == 'teacher' %}
-	    <title>Личная страница сотрудника</title>
-    {% elif request.resolver_match.url_name == 'student' %}
-	    <title>Личная страница студента</title>
-    {% elif request.resolver_match.url_name == 'user_page' %}
-	    <title>Мой профиль</title>
-    {% elif request.resolver_match.url_name == 'groups' %}
-	    <title>Список групп</title>
+		<title>{% trans "Личная страница сотрудника" %}</title>
+	{% elif request.resolver_match.url_name == 'student' %}
+		<title>{% trans "Личная страница студента" %}</title>
+	{% elif request.resolver_match.url_name == 'user_page' %}
+		<title>{% trans "Мой профиль" %}</title>
+	{% elif request.resolver_match.url_name == 'groups' %}
+		<title>{% trans "Список групп" %}</title>
+	{% elif request.resolver_match.url_name == 'group' %}
+		<title>{% trans "Группа" %}</title>
 	{% elif request.resolver_match.url_name == 'user' %}
-	    <title>Мой профиль</title>
+		<title>{% trans "Мой профиль" %}</title>
+	{% elif request.resolver_match.url_name == 'documents' %}
+		<title>{% trans "Список документов" %}</title>
+	{% elif request.resolver_match.url_name == 'doc_add' %}
+		<title>{% trans "Добавление документа" %}</title>
+	{% elif request.resolver_match.url_name == 'doc_upd' %}
+		<title>{% trans "Изменение документа" %}</title>
+	{% elif request.resolver_match.url_name == 'login' %}
+		<title>{% trans "Страница входа" %}</title>
 	{% else %}
-	    <title>АУЭС</title>
+		<title>{% trans "АУЭС" %}</title>
 	{% endif %}
-	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css' %}">
-	<link rel="shortcut icon" href="{% static 'favicon.png' %}" type="image/png">
+	<link rel="stylesheet" type="text/css" href="{% static '/static/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static '/static/css/bootstrap.css' %}">
+	<link rel="shortcut icon" href="{% static '/static/favicon.png' %}" type="image/png">
 </head>
 <body>
   {% include 'html/navbar.html' %}	
   {% block content %}
   {% endblock %}
-<script src="{% static '/js/main.js' %}"></script>
-<script src="{% static '/js/bootstrap1.js' %}"></script>
-<script src="{% static '/js/bootstrap2.js' %}"></script>
-<script src="{% static '/js/bootstrap3.js' %}"></script>
+<script src="{% static '/static/js/main.js' %}"></script>
+<script src="{% static '/static/js/bootstrap1.js' %}"></script>
+<script src="{% static '/static/js/bootstrap2.js' %}"></script>
+<script src="{% static '/static/js/bootstrap3.js' %}"></script>

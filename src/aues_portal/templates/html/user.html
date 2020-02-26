@@ -1,4 +1,5 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% block content %}
 {% load static %}
 <div class="card">
@@ -19,37 +20,37 @@
 		    <dt class="col-sm-2 text-truncate"></dt>
 		    <dd class="col-sm-10">{{form.surname.errors}}</dd>
 		  {% endif %}
-		  <dt class="col-sm-2 text-truncate">Фамилия</dt>
+		  <dt class="col-sm-2 text-truncate">{% trans 'Фамилия' %}</dt>
 		  <dd class="col-sm-10"><textarea name="surname" class="form-control" rows="1">{{request.user.teacher.surname}}</textarea></dd>
 		  {% if form.name.errors %}
 		    <dt class="col-sm-2 text-truncate"></dt>
 		    <dd class="col-sm-10">{{form.name.errors}}</dd>
 		  {% endif %}
-		  <dt class="col-sm-2 text-truncate">Имя</dt>
+		  <dt class="col-sm-2 text-truncate">{% trans 'Имя' %}</dt>
 		  <dd class="col-sm-10"><textarea name="name" class="form-control" rows="1">{{request.user.teacher.name}}</textarea></dd>
 		  {% if form.patronymic.errors %}
 		    <dt class="col-sm-2 text-truncate"></dt>
 		    <dd class="col-sm-10">{{form.patronymic.errors}}</dd>
 		  {% endif %}
-		  <dt class="col-sm-2 text-truncate">Отчество</dt>
+		  <dt class="col-sm-2 text-truncate">{% trans 'Отчество' %}</dt>
 		  <dd class="col-sm-10"><textarea name="patronymic" class="form-control" rows="1">{{request.user.teacher.patronymic}}</textarea></dd>
 		  {% if form.post.errors %}
 		    <dt class="col-sm-2 text-truncate"></dt>
 		    <dd class="col-sm-10">{{form.post.errors}}</dd>
 		  {% endif %}
-		  <dt class="col-sm-2 text-truncate">Должность</dt>
+		  <dt class="col-sm-2 text-truncate">{% trans 'Должность' %}</dt>
 		  <dd class="col-sm-10"><textarea name="post" class="form-control" rows="1">{{request.user.teacher.post}}</textarea></dd>
 		  {% if form.phone.errors %}
 		    <dt class="col-sm-2 text-truncate"></dt>
 		    <dd class="col-sm-10">{{form.phone.errors}}</dd>
 		  {% endif %}
-		  <dt class="col-sm-2 text-truncate">Телефон</dt>
+		  <dt class="col-sm-2 text-truncate">{% trans 'Телефон' %}</dt>
 		  <dd class="col-sm-10"><textarea name="phone" class="form-control" rows="1">{{request.user.teacher.phone}}</textarea></dd>
 		  {% if form.email.errors %}
 		    <dt class="col-sm-2 text-truncate"></dt>
 		    <dd class="col-sm-10">{{form.email.errors}}</dd>
 		  {% endif %}
-		  <dt class="col-sm-2 text-truncate">Почта</dt>
+		  <dt class="col-sm-2 text-truncate">{% trans 'Почта' %}</dt>
 		  <dd class="col-sm-10"><textarea name="email" class="form-control" rows="1">{{request.user.teacher.email}}</textarea></dd>
 		  {% if form.image.errors %}
 		    <dt class="col-sm-2 text-truncate"></dt>
@@ -59,7 +60,7 @@
 			  <dl class="row">
 			    <dt class="col-sm-9">
 			      <dl class="row">
-			        <dt class="col-sm-3">Выбрать новое изображение</dt>
+			        <dt class="col-sm-3">{% trans 'Выбрать новое изображение' %}</dt>
 			    	<dd class="col-sm-9">
 			      	  <div class="form-group">
 						<input name="image" accept="image/*" type="file" class="form-control-file">
@@ -68,11 +69,11 @@
 			      </dl>
 			    </dt>
 			    <dd class="col-sm-3">
-			      <a class="btn btn-primary" href="{% url 'documents' %}" role="button">Изменить список документов</a>
+			      <a class="btn btn-primary" href="{% url 'documents' %}" role="button">{% trans 'Изменить список документов' %}</a>
 			    </dd>
 			  </dl>
 			</dt>
-		  <dd class="col-sm-1"><button type="submit" class="btn btn-success" nama="Update Information">Сохранить</button></dd>
+		  <dd class="col-sm-1"><button type="submit" class="btn btn-success" nama="Update Information">{% trans 'Сохранить' %}</button></dd>
 		</dl>
 	  </div>
 	</div>
@@ -81,23 +82,23 @@
 <div class="card">
   <div class="card-body">
   	<div class="form-group">
-      <label for="exampleFormControlTextarea1">Резюме</label>
+      <label for="exampleFormControlTextarea1">{% trans 'Резюме' %}</label>
       <textarea name="rezume" class="form-control" rows="7">{{request.user.teacher.rezume}}</textarea>
 	</div>
 	<div class="form-group">
-      <label for="exampleFormControlTextarea1">Образование</label>
+      <label for="exampleFormControlTextarea1">{% trans 'Образование' %}</label>
       <textarea name="education" class="form-control" rows="7">{{request.user.teacher.education}}</textarea>
 	</div>
 	<div class="form-group">
-      <label for="exampleFormControlTextarea1">Повышение квалификации</label>
+      <label for="exampleFormControlTextarea1">{% trans 'Повышение квалификации' %}</label>
       <textarea name="qualification_up" class="form-control" rows="7">{{request.user.teacher.qualification_up}}</textarea>
 	</div>
 	<div class="form-group">
-      <label for="exampleFormControlTextarea1">Научные статьи</label>
+      <label for="exampleFormControlTextarea1">{% trans 'Научные статьи' %}</label>
       <textarea name="science_articles" class="form-control" rows="7">{{request.user.teacher.science_articles}}</textarea>
 	</div>
 	<div class="form-group">
-      <label for="exampleFormControlTextarea1">Награды</label>
+      <label for="exampleFormControlTextarea1">{% trans 'Награды' %}</label>
       <textarea name="аwards" class="form-control" rows="7">{{request.user.teacher.аwards}}</textarea>
 	</div>
   </div>

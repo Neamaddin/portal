@@ -1,0 +1,363 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-26 22:32+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\aues_portal\templates\html\dashboard.html:12
+msgid "Алматинский университет энергетики и связи имени Гумарбека Даукеева"
+msgstr ""
+
+#: .\aues_portal\templates\html\dashboard.html:23
+msgid "История университета"
+msgstr ""
+
+#: .\aues_portal\templates\html\dashboard.html:25
+msgid ""
+"Алматинский университет энергетики и связи создан 10 января 1997 г. на базе "
+"Алматинского Энергетического Института (АЭИ), существовавшего с 1975 года по "
+"1997 год. Является первым негосударственным техническим вузом со статусом "
+"некоммерческой организации. Обучение ведется на казахском и русском языках. "
+"В 2013 году начато обучение на английском языке пока по двум специальностям: "
+"«Радиотехника, электроника и телекоммуникации» и «Электроэнергетика». В 1989 "
+"году Алматинский энергетический институт первым в Казахстане и одним из "
+"немногих в Советском Союзе был аттестован комиссией Государственной "
+"Инспекции Гособразования СССР. Высокий уровень подготовки специалистов в АЭИ "
+"был признан официально на союзном уровне, и это несомненный успех коллектива "
+"студентов, преподавателей и руководства института. В мае 1996 года "
+"постановлением правительства Республики Казахстан проведена масштабная "
+"реорганизация сети высших учебных заведений: в областях республики были "
+"созданы региональные университеты путем объединения бывших самостоятельных "
+"высших учебных заведений. Алматинский энергетический институт был "
+"присоединен к Казахскому национальному техническому университету в качестве "
+"структурного подразделения – «Учебно-научного комплекса энергетики и "
+"телекоммуникаций» (УНК ЭиТК). В мае 1997 года «УНК ЭиТК» был преобразован в "
+"Алматинский институт энергетики и связи со статусом некоммерческого "
+"акционерного общества. Ректором нового института был избран Гумарбек "
+"Жусупбекович Даукеев. С июля 2010 года Алматинский институт энергетики и "
+"связи получил статус университета с правом готовить магистрантов и "
+"докторантов PhD и новое наименование – некоммерческое акционерное общество "
+"«Алматинский университет энергетики и связи» (АУЭС)."
+msgstr ""
+
+#: .\aues_portal\templates\html\department.html:17
+msgid "Список преподавателей кафедры"
+msgstr ""
+
+#: .\aues_portal\templates\html\department.html:41
+#, python-format
+msgid "Список групп кафедры %(depar)s"
+msgstr ""
+
+#: .\aues_portal\templates\html\department.html:51
+#: .\aues_portal\templates\html\groups.html:23
+msgid "Группы с первым курсом обучения"
+msgstr ""
+
+#: .\aues_portal\templates\html\department.html:63
+#: .\aues_portal\templates\html\groups.html:35
+msgid "Группы со вторым курсом обучения"
+msgstr ""
+
+#: .\aues_portal\templates\html\department.html:75
+#: .\aues_portal\templates\html\groups.html:47
+msgid "Группы с третьим курсом обучения"
+msgstr ""
+
+#: .\aues_portal\templates\html\department.html:87
+#: .\aues_portal\templates\html\groups.html:59
+msgid "Группы с четвертым курсом обучения"
+msgstr ""
+
+#: .\aues_portal\templates\html\departments.html:12
+#: .\aues_portal\templates\html\institut.html:11
+msgid "Кафедры института"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:11
+#: .\aues_portal\templates\html\doc_upd.html:11
+msgid "Описание документа"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:17
+#: .\aues_portal\templates\html\doc_upd.html:17
+msgid "Тип документа"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:22
+#: .\aues_portal\templates\html\doc_upd.html:21
+#: .\aues_portal\templates\html\documents.html:19
+msgid "Документ(Дипломы)"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:23
+#: .\aues_portal\templates\html\doc_upd.html:22
+#: .\aues_portal\templates\html\documents.html:21
+msgid "Скан сертификатов(повышение квалификации)"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:24
+#: .\aues_portal\templates\html\doc_upd.html:23
+#: .\aues_portal\templates\html\documents.html:23
+msgid "Оттиск из статьи"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:25
+#: .\aues_portal\templates\html\doc_upd.html:24
+#: .\aues_portal\templates\html\documents.html:25
+#: .\aues_portal\templates\html\teacher.html:147
+#: .\aues_portal\templates\html\user.html:101
+msgid "Награды"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:28
+msgid "Выбрать документ"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_add.html:35
+#: .\aues_portal\templates\html\doc_upd.html:61
+#: .\aues_portal\templates\html\user.html:76
+msgid "Сохранить"
+msgstr ""
+
+#: .\aues_portal\templates\html\doc_upd.html:49
+msgid "На данный момент:"
+msgstr "Құжаттарды өзгерту"
+
+#: .\aues_portal\templates\html\doc_upd.html:54
+msgid "Выбрать новый документ"
+msgstr ""
+
+#: .\aues_portal\templates\html\documents.html:5
+#, fuzzy
+#| msgid "Добавление документа"
+msgid "Добавить документ"
+msgstr "Құжатты қосу"
+
+#: .\aues_portal\templates\html\documents.html:8
+msgid "Описание"
+msgstr ""
+
+#: .\aues_portal\templates\html\documents.html:9
+msgid "Категория"
+msgstr ""
+
+#: .\aues_portal\templates\html\documents.html:10
+msgid "Название файла"
+msgstr ""
+
+#: .\aues_portal\templates\html\documents.html:11
+#: .\aues_portal\templates\html\documents.html:28
+msgid "Изменить"
+msgstr ""
+
+#: .\aues_portal\templates\html\documents.html:12
+msgid "Удалить"
+msgstr ""
+
+#: .\aues_portal\templates\html\group.html:10
+msgid "Эдвайзер: "
+msgstr ""
+
+#: .\aues_portal\templates\html\group.html:14
+#: .\aues_portal\templates\html\pps.html:21
+#: .\aues_portal\templates\html\teacher.html:17
+msgid "Ф.И.О."
+msgstr ""
+
+#: .\aues_portal\templates\html\group.html:15
+#: .\aues_portal\templates\html\pps.html:23
+msgid "Личная страница"
+msgstr ""
+
+#: .\aues_portal\templates\html\group.html:22
+#: .\aues_portal\templates\html\pps.html:32
+msgid "перейти"
+msgstr ""
+
+#: .\aues_portal\templates\html\instituts.html:12
+msgid "Информация"
+msgstr ""
+
+#: .\aues_portal\templates\html\login.html:17
+msgid "Имя пользователя"
+msgstr ""
+
+#: .\aues_portal\templates\html\login.html:23
+msgid "Пароль"
+msgstr ""
+
+#: .\aues_portal\templates\html\main.html:8
+msgid "Главная страница"
+msgstr "Негізгі бет"
+
+#: .\aues_portal\templates\html\main.html:10
+#: .\aues_portal\templates\html\navbar.html:18
+msgid "Институты"
+msgstr "Институттар"
+
+#: .\aues_portal\templates\html\main.html:12
+#: .\aues_portal\templates\html\navbar.html:23
+msgid "Кафедры"
+msgstr "Кафедралар"
+
+#: .\aues_portal\templates\html\main.html:14
+msgid "Страница кафедры"
+msgstr "Кафедраның беті"
+
+#: .\aues_portal\templates\html\main.html:16
+#: .\aues_portal\templates\html\navbar.html:28
+msgid "Преподавательский состав"
+msgstr "Оқытушылар құрамы"
+
+#: .\aues_portal\templates\html\main.html:18
+msgid "Личная страница сотрудника"
+msgstr "Қызметкердің жеке беті"
+
+#: .\aues_portal\templates\html\main.html:20
+msgid "Личная страница студента"
+msgstr "Студенттің жеке беті"
+
+#: .\aues_portal\templates\html\main.html:22
+#: .\aues_portal\templates\html\main.html:28
+#: .\aues_portal\templates\html\navbar.html:41
+msgid "Мой профиль"
+msgstr "Менің профилім"
+
+#: .\aues_portal\templates\html\main.html:24
+#: .\aues_portal\templates\html\navbar.html:34
+msgid "Список групп"
+msgstr "Топтардың тізімі"
+
+#: .\aues_portal\templates\html\main.html:26
+#: .\aues_portal\templates\html\student.html:8
+msgid "Группа"
+msgstr "Топ"
+
+#: .\aues_portal\templates\html\main.html:30
+msgid "Список документов"
+msgstr "Құжаттар тізімі"
+
+#: .\aues_portal\templates\html\main.html:32
+msgid "Добавление документа"
+msgstr "Құжаттарды қосу"
+
+#: .\aues_portal\templates\html\main.html:34
+msgid "Изменение документа"
+msgstr "Құжаттарды өзгерту"
+
+#: .\aues_portal\templates\html\main.html:36
+msgid "Страница входа"
+msgstr "Кіру беті"
+
+#: .\aues_portal\templates\html\main.html:38
+msgid "АУЭС"
+msgstr "АЭжБУ"
+
+#: .\aues_portal\templates\html\navbar.html:13
+msgid "Главная"
+msgstr "Негізгі бет"
+
+#: .\aues_portal\templates\html\navbar.html:61
+#, python-format
+msgid "Вы авторизованы как %(user)s"
+msgstr "Cіз %(user)s ретінде авторизация жасадыныз"
+
+#: .\aues_portal\templates\html\navbar.html:62
+msgid "Выйти"
+msgstr "Шығу"
+
+#: .\aues_portal\templates\html\navbar.html:64
+msgid "Вы авторизованы как Гость"
+msgstr "Cіз Қонақ ретінде авторизация жасадыныз"
+
+#: .\aues_portal\templates\html\navbar.html:65
+msgid "Войти"
+msgstr "Кіру"
+
+#: .\aues_portal\templates\html\pps.html:22
+#: .\aues_portal\templates\html\teacher.html:20
+#: .\aues_portal\templates\html\user.html:41
+msgid "Должность"
+msgstr ""
+
+#: .\aues_portal\templates\html\student.html:6
+#: .\aues_portal\templates\html\user.html:29
+msgid "Имя"
+msgstr ""
+
+#: .\aues_portal\templates\html\student.html:7
+#: .\aues_portal\templates\html\user.html:23
+msgid "Фамилия"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:23
+#: .\aues_portal\templates\html\user.html:47
+msgid "Телефон"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:26
+#: .\aues_portal\templates\html\user.html:53
+msgid "Почта"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:41
+#: .\aues_portal\templates\html\user.html:85
+msgid "Резюме"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:57
+#: .\aues_portal\templates\html\user.html:89
+msgid "Образование"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:67
+msgid "Сканы дипломов"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:87
+#: .\aues_portal\templates\html\user.html:93
+msgid "Повышение квалификации"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:97
+msgid "Сканы сертификатов"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:117
+#: .\aues_portal\templates\html\user.html:97
+msgid "Научные статьи"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:127
+msgid "Оттиски статей"
+msgstr ""
+
+#: .\aues_portal\templates\html\teacher.html:156
+msgid "Прочие заслуги"
+msgstr ""
+
+#: .\aues_portal\templates\html\user.html:35
+msgid "Отчество"
+msgstr ""
+
+#: .\aues_portal\templates\html\user.html:63
+msgid "Выбрать новое изображение"
+msgstr ""
+
+#: .\aues_portal\templates\html\user.html:72
+msgid "Изменить список документов"
+msgstr "Құжаттар тізімі"

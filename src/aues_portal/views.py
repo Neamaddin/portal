@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .forms import *
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .decorators import *
 from .models import *
+from .forms import *
 
 # Create your views here.
 def logoutuser(request):
@@ -162,6 +162,7 @@ def doc_upd(request, doc_id):
 def doc_del(request, doc_id):
 	doc = Document.objects.get(id = doc_id)
 	if request.method == 'POST':
+		doc.file.delete()
 		doc.delete()
 	return redirect('documents')
 #@allowed_users(allowed_roles = ['группа']) Доступ по группе

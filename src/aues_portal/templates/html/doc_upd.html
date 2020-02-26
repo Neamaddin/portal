@@ -1,4 +1,5 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% block content %}
 <form action="" method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
@@ -7,53 +8,57 @@
 	  <div class="card-body">
 			<dl class="row">
 				<dt class="col-sm-3">
-			  	Описание документа
+			  	{% trans "Описание документа" %}
 			  </dt>
 				<dd class="col-sm-9">
 					<textarea name="name" class="form-control" rows="1">{{doc.name}}</textarea>
 				</dd>
 				<dt class="col-sm-3">
-			  	Тип документа
+			  	{% trans "Тип документа" %}
 			  </dt>
 				<dd class="col-sm-9">
 					<select name="category" required class="custom-select my-1 mr-sm-2">
+						{% trans "Документ(Дипломы)" as document %}
+						{% trans "Скан сертификатов(повышение квалификации)" as sertificat %}
+						{% trans "Оттиск из статьи" as artice %}
+						{% trans "Награды" as award %}
 						{% if doc.category == "document" %}
-							<option value="{{doc.category}}" selected>Документ(Дипломы)</option>
-							<option value="sertificat">Скан сертификатов(повышение квалификации)</option>
-					  	<option value="article">Оттиск из статьи</option>
-					  	<option value="award">Награды</option>
+							<option value="{{doc.category}}" selected>{{document}}</option>
+							<option value="sertificat">{{sertificat}}</option>
+					  		<option value="article">{{artice}}</option>
+					  		<option value="award">{{award}}</option>
 						{% elif doc.category == "sertificat" %}
-							<option value="{{doc.category}}" selected>Скан сертификатов(повышение квалификации)</option>
-							<option value="document">Документ(Дипломы)</option>
-							<option value="article">Оттиск из статьи</option>
-					  	<option value="award">Награды</option>
+							<option value="{{doc.category}}" selected>{{sertificat}}</option>
+							<option value="document">{{document}}</option>
+							<option value="article">{{article}}</option>
+					  		<option value="award">{{award}}</option>
 						{% elif doc.category == "article" %}
-							<option value="{{doc.category}}" selected>Оттиск из статьи</option>
-							<option value="document">Документ(Дипломы)</option>
-					  	<option value="sertificat">Скан сертификатов(повышение квалификации)</option>
-					  	<option value="award">Награды</option>
+							<option value="{{doc.category}}" selected>{{article}}</option>
+							<option value="document">{{document}}</option>
+					  		<option value="sertificat">{{sertificat}}</option>
+					  		<option value="award">{{award}}</option>
 						{% elif doc.category == "award" %}
-							<option value="{{doc.category}}" selected>Награды</option>
-							<option value="document">Документ(Дипломы)</option>
-					  	<option value="sertificat">Скан сертификатов(повышение квалификации)</option>
-					  	<option value="article">Оттиск из статьи</option>
+							<option value="{{doc.category}}" selected>{{award}}</option>
+							<option value="document">{{document}}</option>
+					  		<option value="sertificat">{{sertificat}}</option>
+					  		<option value="article">{{article}}</option>
 						{% endif %}
 				  </select>
 				</dd>
 				<dt class="col-sm-3">
-			  	На данный момент:
+			  	{% trans "На данный момент:" %}
 			  </dt>
 				<dd class="col-sm-9">
 					<a href="{{doc.file.url}}">{{doc.file.name}}</a>
 				</dd>
-        <dt class="col-sm-3">Выбрать новый документ</dt>
+        <dt class="col-sm-3">{% trans "Выбрать новый документ" %}</dt>
 	    	<dd class="col-sm-9">
 	    		<dl class="row">
 		        <dt class="col-sm-10">
 		        	<input type="file" name="file" class="form-control-file">
 		        </dt>
 			    	<dd class="col-sm-2">
-	      	  	<button type="submit" class="btn btn-success" nama="Submit">Сохранить</button>
+	      	  	<button type="submit" class="btn btn-success" nama="Submit">{% trans "Сохранить" %}</button>
 			    	</dd>
 			    </dl>
 	    	</dd>

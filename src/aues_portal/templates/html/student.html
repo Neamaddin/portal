@@ -1,10 +1,11 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% block content %}
 <table class="table">
 	<tr>
-		<th>Имя</th>
-		<th>Фамилия</th>
-		<th>Группа</th>
+		<th>{% trans 'Имя' %}</th>
+		<th>{% trans 'Фамилия' %}</th>
+		<th>{% trans 'Группа' %}</th>
 	</tr>
 		<tr>
 			<td>{{student.name}}</td>

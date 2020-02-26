@@ -1,30 +1,31 @@
 {% extends 'html/main.html' %}
+{% load i18n %}
 {% block content %}
 <div class="card card-body">
-	<a class="btn btn-primary btn-sm btn-block" href="{% url 'doc_add' %}">Добавить документ</a>
+	<a class="btn btn-primary btn-sm btn-block" href="{% url 'doc_add' %}">{% trans "Добавить документ" %}</a>
 	<table class="table table-sm">
 		<tr>
-			<th>Описание</th>
-			<th>Категория</th>
-			<th>Название файла</th>
-			<th>Изменить</th>
-			<th>Удалить</th>
+			<th>{% trans "Описание" %}</th>
+			<th>{% trans "Категория" %}</th>
+			<th>{% trans "Название файла" %}</th>
+			<th>{% trans "Изменить" %}</th>
+			<th>{% trans "Удалить" %}</th>
 		</tr>
 		{% for doc in document %}
 			{% if doc.doc_name == request.user.teacher %}
 				<tr>
 					<td>{{doc.name}}</td>
 					{% if doc.category == 'document' %}
-						<td>Документ(Дипломы)</td>
+						<td>{% trans "Документ(Дипломы)" %}</td>
 					{% elif doc.category == 'sertificat' %}
-						<td>Скан сертификатов(повышение квалификации)</td>
+						<td>{% trans "Скан сертификатов(повышение квалификации)" %}</td>
 					{% elif doc.category == 'article' %}
-						<td>Оттиск из статьи</td>
+						<td>{% trans "Оттиск из статьи" %}</td>
 					{% elif doc.category == 'award' %}
-						<td>Награды</td>
+						<td>{% trans "Награды" %}</td>
 					{% endif %}
 					<td>{{doc.file.name}}</td>
-					<td><a class="btn btn-sm btn-info" href="{% url 'doc_upd' doc.id %}">Изменить</a></td>
+					<td><a class="btn btn-sm btn-info" href="{% url 'doc_upd' doc.id %}">{% trans "Изменить" %}</a></td>
 					<td>
 						<form action="{% url 'doc_del' doc.id %}" method="POST" onsubmit="return ConfirmDelete()">
 							{% csrf_token %}
