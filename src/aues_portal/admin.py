@@ -1,35 +1,38 @@
 from django.contrib import admin
+from django.utils.translation import gettext as _
 from .models import *
 
 
-admin.site.site_header = 'Администрирование Портала'
-admin.site.index_title = 'Администрирование Портала'
-admin.site.site_title = 'АУЭС'
+admin.site.site_header = _('Администрирование Портала')
+admin.site.index_title = _('Администрирование Портала')
+admin.site.site_title = _('АУЭС')
 
-# Register your models here.
 class GroupInline(admin.TabularInline):
+	exclude = ['department', 'name']
 	model = Group
 	extra = 1
 
 class StudentInline(admin.TabularInline):
+	exclude = ['name', 'surname', 'patronymic']
 	model = Student
 	extra = 1
 
 class DocumentInline(admin.TabularInline):
+	exclude = ['name']
 	model = Document
 	extra = 1
 
 class StudyYearFilter(admin.SimpleListFilter):
-	title = 'Курс обучения'
+	title = _('Курс обучения')
 	parameter_name = 'study_start'
 
 	def lookups(self, request, model_admin):
 		return (
-			('1', 'Первый курс'),
-			('2', 'Второй курс'),
-			('3', 'Третий курс'),
-			('4', 'Четвертый курс'),
-			('end_study', 'Выпустившиеся группы'),
+			('1', _('Первый курс')),
+			('2', _('Второй курс')),
+			('3', _('Третий курс')),
+			('4', _('Четвертый курс')),
+			('end_study', _('Выпустившиеся группы')),
 		)
 
 	def queryset(self, request, queryset):
@@ -48,8 +51,8 @@ class StudyYearFilter(admin.SimpleListFilter):
 def depars_by_inst_id(inst_id):
 	class DepartmentsFilter(admin.SimpleListFilter):
 		inst = Institute.objects.get(id = inst_id)
-		title = "Кафедры " + inst.short_name + "-а"
-		parameter_name = "department_first"
+		title = _("Кафедры " + inst.short_name + "-а")
+		parameter_name = "department"
 
 		def lookups(self, request, model_admin):
 			list_of_department = []
@@ -67,7 +70,7 @@ def depars_by_inst_id(inst_id):
 def depars_rel_by_inst_id(inst_id):
 	class DepartmentReleaseFilter(admin.SimpleListFilter):
 		inst = Institute.objects.get(id = inst_id)
-		title = "Кафедры " + inst.short_name + "-а"
+		title = _("Кафедры " + inst.short_name + "-а")
 		parameter_name = "department_first"
 
 		def lookups(self, request, model_admin):
@@ -86,35 +89,41 @@ def depars_rel_by_inst_id(inst_id):
 
 @admin.register(Institute)
 class InstituteAdmin(admin.ModelAdmin):
+	exclude = ['name', 'short_name', 'info']
 	list_display = ("short_name", "name")
 
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
+	exclude = ['name', 'short_name', 'info']
 	list_display = ("short_name", "name")
 	search_fields = ("name", "short_name")
 	list_filter = ("institute",)
 
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
+	exclude = ['name', 'surname', 'patronymic', 'rezume', 'post', 'education', 'qualification_up', 'science_articles', 'аwards']
 	list_display = ("__str__", "department")
-	list_filter = (depars_by_inst_id(1),)
+	list_filter = (depars_by_inst_id(3), )
 	search_fields = ("name", "surname", "patronymic")
 	inlines = [DocumentInline, GroupInline]
 
 @admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
+	exclude = ['name']
 	list_display = ("name", "department", "group_adviser")
-	list_filter = (depars_rel_by_inst_id(1), StudyYearFilter)
+	list_filter = (depars_rel_by_inst_id(3), StudyYearFilter)
 	search_fields = ("name",)
 	inlines = [StudentInline]
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
+	exclude = ['name', 'surname', 'patronymic']
 	list_display = ("__str__", "group")
 	search_fields = ("name", "surname", "patronymic", "group__name")
 
 @admin.register(Document)
 class DocumentAdmin(admin.ModelAdmin):
+	exclude = ['name', 'short_name', 'info']
 	list_display = ("name", "doc_name", "category")
 	list_filter = ("category",)
 	search_fields = ("name", "doc_name__name", "doc_name__surname", "doc_name__patronymic")

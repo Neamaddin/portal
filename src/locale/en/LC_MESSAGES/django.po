@@ -16,152 +16,153 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\aues_portal\admin.py:6 .\aues_portal\admin.py:7
 msgid "Администрирование Портала"
-msgstr "Портал әкшімшілігі"
+msgstr "Portal administration"
 
 #: .\aues_portal\admin.py:8 .\aues_portal\templates\html\main.html:38
 msgid "АУЭС"
-msgstr "АЭжБУ"
+msgstr "AUPET"
 
 #: .\aues_portal\admin.py:26
 msgid "Курс обучения"
-msgstr "Оқу курсы"
+msgstr "Cource of Study"
 
 #: .\aues_portal\admin.py:31
 msgid "Первый курс"
-msgstr "Бірінші курс"
+msgstr "First cource"
 
 #: .\aues_portal\admin.py:32
 msgid "Второй курс"
-msgstr "Екінші курс"
+msgstr "Second cource"
 
 #: .\aues_portal\admin.py:33
 msgid "Третий курс"
-msgstr "Үшінші"
+msgstr "Third cource"
 
 #: .\aues_portal\admin.py:34
 msgid "Четвертый курс"
-msgstr "Төртінші курс"
+msgstr "Fourth cource"
 
 #: .\aues_portal\admin.py:35
 msgid "Выпустившиеся группы"
-msgstr "Бітірген топтар"
+msgstr "Graduated"
 
 #: .\aues_portal\admin.py:54 .\aues_portal\admin.py:73
 msgid "Кафедры "
-msgstr "Кафедралар"
+msgstr "Departments"
 
 #: .\aues_portal\models.py:10
 msgid "Полное название института"
-msgstr "Институттын толық аты"
+msgstr "Full name of the institute"
 
 #: .\aues_portal\models.py:11
 msgid "Аббревиатура института"
-msgstr "Институттын аббревиатурасы"
+msgstr "Institute abbreviation"
 
 #: .\aues_portal\models.py:12 .\aues_portal\models.py:26
 msgid "Ссылка"
-msgstr "Сілтеме"
+msgstr "Link"
 
 #: .\aues_portal\models.py:13
 msgid "Информация об институте"
-msgstr "Интститут туралы ақпарат"
+msgstr "Institute information"
 
 #: .\aues_portal\models.py:16 .\aues_portal\models.py:23
 msgid "Институт"
-msgstr "Институт"
+msgstr "Institute"
 
 #: .\aues_portal\models.py:17 .\aues_portal\templates\html\main.html:10
 #: .\aues_portal\templates\html\navbar.html:18
 msgid "Институты"
-msgstr "Институттар"
+msgstr "Institutes"
 
 #: .\aues_portal\models.py:24
 msgid "Полное название кафедры"
-msgstr "Кафедраның толық аты"
+msgstr "Full name of the department"
 
 #: .\aues_portal\models.py:25
 msgid "Аббревиатура кафедры"
-msgstr "Кафедраның аббревиатурасы"
+msgstr "Department abbreviation"
 
 #: .\aues_portal\models.py:27
 msgid "Информация о кафедре"
-msgstr "Кафедра туралы ақпарат"
+msgstr "Department information"
 
 #: .\aues_portal\models.py:28
 msgid "Выпуск групп"
-msgstr "Топтар шығарадыма"
+msgstr "Group release"
 
 #: .\aues_portal\models.py:31 .\aues_portal\models.py:39
 #: .\aues_portal\models.py:91
 msgid "Кафедра"
-msgstr "Кафедра"
+msgstr "Department"
 
 #: .\aues_portal\models.py:32 .\aues_portal\templates\html\main.html:12
 #: .\aues_portal\templates\html\navbar.html:23
 msgid "Кафедры"
-msgstr "Кафедралар"
+msgstr "Departments"
 
 #: .\aues_portal\models.py:38
 msgid "Пользовательская страница"
-msgstr "Жеке бет"
+msgstr "Custom page"
 
 #: .\aues_portal\models.py:40 .\aues_portal\models.py:116
 #: .\aues_portal\templates\html\student.html:6
 #: .\aues_portal\templates\html\user.html:29
 msgid "Имя"
-msgstr "Аты"
+msgstr "Name"
 
 #: .\aues_portal\models.py:41 .\aues_portal\models.py:117
 #: .\aues_portal\templates\html\student.html:7
 #: .\aues_portal\templates\html\user.html:23
 msgid "Фамилия"
-msgstr "Тегі"
+msgstr "Surname"
 
 #: .\aues_portal\models.py:42 .\aues_portal\models.py:118
 #: .\aues_portal\templates\html\user.html:35
 msgid "Отчество"
-msgstr "Әкесінің аты"
+msgstr "Patronymic"
 
 #: .\aues_portal\models.py:43
 msgid "Фотография"
-msgstr "Фото"
+msgstr "Photo"
 
 #: .\aues_portal\models.py:44 .\aues_portal\templates\html\teacher.html:41
 #: .\aues_portal\templates\html\user.html:85
 msgid "Резюме"
-msgstr "Түіндеме"
+msgstr "Summary"
 
 #: .\aues_portal\models.py:45 .\aues_portal\templates\html\teacher.html:23
 #: .\aues_portal\templates\html\user.html:47
 msgid "Телефон"
-msgstr "Телефон"
+msgstr "Phone"
 
 #: .\aues_portal\models.py:46 .\aues_portal\templates\html\teacher.html:26
 #: .\aues_portal\templates\html\user.html:53
 msgid "Почта"
-msgstr "Пошта"
+msgstr "Mail"
 
 #: .\aues_portal\models.py:47
 msgid "Занимаемая должность"
-msgstr "Ұстанымы"
+msgstr "Position held"
 
 #: .\aues_portal\models.py:48 .\aues_portal\templates\html\teacher.html:57
 #: .\aues_portal\templates\html\user.html:89
 msgid "Образование"
-msgstr "Білім"
+msgstr "Education"
 
 #: .\aues_portal\models.py:49 .\aues_portal\templates\html\teacher.html:87
 #: .\aues_portal\templates\html\user.html:93
 msgid "Повышение квалификации"
-msgstr "Біліктілікті аттыру"
+msgstr "Qualification increace"
 
 #: .\aues_portal\models.py:50 .\aues_portal\templates\html\teacher.html:117
 #: .\aues_portal\templates\html\user.html:97
 msgid "Научные статьи"
-msgstr "Ғылыми мақалалар"
+msgstr "Scientific"
 
 #: .\aues_portal\models.py:51 .\aues_portal\models.py:66
 #: .\aues_portal\models.py:86 .\aues_portal\templates\html\doc_add.html:25
@@ -170,95 +171,95 @@ msgstr "Ғылыми мақалалар"
 #: .\aues_portal\templates\html\teacher.html:147
 #: .\aues_portal\templates\html\user.html:101
 msgid "Награды"
-msgstr "Марапаттар"
+msgstr "Awards"
 
 #: .\aues_portal\models.py:54
 msgid "Преподаватель"
-msgstr "Оқытушы"
+msgstr "Teacher"
 
 #: .\aues_portal\models.py:55
 msgid "Преподаватели"
-msgstr "Оқытушылар"
+msgstr "Teachers"
 
 #: .\aues_portal\models.py:63 .\aues_portal\models.py:80
 #: .\aues_portal\templates\html\doc_add.html:22
 #: .\aues_portal\templates\html\doc_upd.html:21
 #: .\aues_portal\templates\html\documents.html:19
 msgid "Документ(Дипломы)"
-msgstr "Құжат(Дипломдар)"
+msgstr "Document(Diplomas)"
 
 #: .\aues_portal\models.py:64 .\aues_portal\models.py:82
 #: .\aues_portal\templates\html\doc_add.html:23
 #: .\aues_portal\templates\html\doc_upd.html:22
 #: .\aues_portal\templates\html\documents.html:21
 msgid "Скан сертификатов(повышение квалификации)"
-msgstr "Сертификат сканы(Біліктілікті аттыру)"
+msgstr "Certificates scan(qualification increace)"
 
 #: .\aues_portal\models.py:65 .\aues_portal\models.py:84
 #: .\aues_portal\templates\html\doc_add.html:24
 #: .\aues_portal\templates\html\doc_upd.html:23
 #: .\aues_portal\templates\html\documents.html:23
 msgid "Оттиск из статьи"
-msgstr "Мақаладан алған әсер"
+msgstr "Impression of article"
 
 #: .\aues_portal\models.py:68 .\aues_portal\templates\html\doc_add.html:11
 #: .\aues_portal\templates\html\doc_upd.html:11
 msgid "Описание документа"
-msgstr "Құжат сипаттамасы"
+msgstr "Document description"
 
 #: .\aues_portal\models.py:69
 msgid "Кому принадлежит докумет"
-msgstr "Құжат кімге тиесілі"
+msgstr "Who owns the document"
 
 #: .\aues_portal\models.py:70 .\aues_portal\templates\html\documents.html:9
 msgid "Категория"
-msgstr "Санат"
+msgstr "Category"
 
 #: .\aues_portal\models.py:71 .\aues_portal\models.py:74
 msgid "Документ"
-msgstr "Құжат"
+msgstr "Document"
 
 #: .\aues_portal\models.py:75
 msgid "Документы"
-msgstr "Құжаттар"
+msgstr "Documents"
 
 #: .\aues_portal\models.py:92
 msgid "Название группы"
-msgstr "Топтың аты"
+msgstr "Group name"
 
 #: .\aues_portal\models.py:93
 msgid "Эдвайзер группы"
-msgstr "Топтың эдвайзеры"
+msgstr "Group adviser"
 
 #: .\aues_portal\models.py:94
 msgid "Дата начала обучения группы"
-msgstr "Топтың басталу күні"
+msgstr "Group start date"
 
 #: .\aues_portal\models.py:97 .\aues_portal\models.py:119
 #: .\aues_portal\templates\html\main.html:26
 #: .\aues_portal\templates\html\student.html:8
 msgid "Группа"
-msgstr "Топ"
+msgstr "Group"
 
 #: .\aues_portal\models.py:98
 msgid "Группы"
-msgstr "Топтар"
+msgstr "Groups"
 
 #: .\aues_portal\models.py:122
 msgid "Студент"
-msgstr "Студент"
+msgstr "Student"
 
 #: .\aues_portal\models.py:123
 msgid "Студенты"
-msgstr "Студенттер"
+msgstr "Students"
 
 #: .\aues_portal\templates\html\dashboard.html:12
 msgid "Алматинский университет энергетики и связи имени Гумарбека Даукеева"
-msgstr "Ғұмарбек Даукеев атындағы Алматы Энергетика және Байланыс Университетi"
+msgstr "Almaty University of Power Engineering and Telecommunications named after G.Daukeev"
 
 #: .\aues_portal\templates\html\dashboard.html:26
 msgid "История университета"
-msgstr "Университет тарихы"
+msgstr "History of University"
 
 #: .\aues_portal\templates\html\dashboard.html:28
 msgid ""
@@ -287,235 +288,247 @@ msgid ""
 "докторантов PhD и новое наименование – некоммерческое акционерное общество "
 "«Алматинский университет энергетики и связи» (АУЭС)."
 msgstr ""
-"Алматы энергетика және байланыс университеті 1997 жылы 10 қаңтарда  "
-"1975 жылдан 1997 ж. дейін  болған Алматы энергетика институты (АЭИ) базасында "
-"құрылған. Коммерциялық емес ұйым мәртебесі бар бірінші мемлекеттік емес "
-"техникалық жоғары оқу орны болып табылады. Оқу қазақ және орыс тілдерінде "
-"жүргізіледі.2013 ж. бастап екі мамандық бойынша ағылшын тілінде оқыту басталды: "
-"«Радиотехника, электроника және телекоммуникация» мен «Электр энергетикасы». "
-"1989 жылы Алматы энергетика институты Қазақстанда бірінші рет Кеңес "
-"Одағындағы бірден бір КСРО-ның Мембілім беру Мемлекеттік инспекциясының  "
-"комиссиясымен аттестатталды. АЭИ жоғары деңгейде мамандар даярлау бойынша "
-"кеңес кезеңінде арнайы танылды, бұл студенттер, оқутышылар ұжымы мен институт "
-"басшылығының сөзсіз табысы. 1996 жылғы мамырда Қазақстан Республикасы "
-"Үкіметінің қаулысымен жоғары оқу орындары желілерінде масштабты қайта құру "
-"жүргізілді: республиканың облыстарында бұрынғы дербес жоғары оқу орындарын "
-"біріктіру арқылы өңірлік университеттер құрылды. Алматы энергетика "
-"институты  «Энергетика және телекоммуникация оқу-ғылыми кешені» (ЭжТ ОҒК) "
-"құрылымдық бөлімшесі ретінде Қазақ ұлттық техникалық университетіне қосылды. "
-"1997 жылы мамырда «ЭжТ ОҒК» коммерциялық емес акционерлік қоғам мәртебесі бар "
-"Алматы энергетика және байланыс институты болып қайта құрылды. Жаңа "
-"институттың ректоры болып Ғұмарбек Жүсіпбекұлы Даукеев тағайындалды. 2010 ж. "
-"шілдеден бастап Алматы энергетика және байланыс университеті PhD "
-"магистранттар мен докторанттар даярлауға құқы бар  университет және  жаңа "
-"атаумен «Алматы энергетика және байланыс университеті» коммерциялық емес "
-"акционерлік қоғамы  мәртебесін алды (АЭжБУ)."
+"Almaty University of Power Engineering and Telecommunications on January 10 "
+"1997, on the basis of the Almaty Energy Institute (AEI), which existed fro "
+"1975 to 1997, was created. AUPET is the first non-state technical "
+"university with the status of a non-profit organization. Training is "
+"conducted in the Kazakh and Russian languages. In 2013, education in "
+"English in two specialties: «Radio Engineering, Electronics and "
+"Telecommunications» and «Electric Power Engineering» was started so "
+"far. In 1989, the Almaty Energy Institute was the first in Kazakhstan "
+"and one of the few in the Soviet Union which was certified by a "
+"commission of the State Inspectorate of the USSR State Administration. "
+"The high level of training at AEI was officially recognized at the "
+"Union level. "
+"This is the undoubted success of a group of students, teachers and "
+"university management. In May 1996, by a resolution of the Government "
+"of the Republic of Kazakhstan, a large-scale reorganization of the"
+"network of higher educational institutions was carried out. In "
+"the regions of the republic, regional universities were created "
+"by combining former independent higher education institutions. "
+"The Almaty Energy Institute to the Kazakh National Technical "
+"University as a structural unit – «Educational and Scientific "
+"Complex of Energy and Telecommunications» (ESCET) was attached. In "
+"May 1997, ESCET  was transformed into the Almaty Institute of Power "
+"Engineering and Telecommunications with the with the status of a "
+"non-profit joint-stock company. Gumarbek Zhusupbekovich Daukeev"
+"was elected as a rector of the new institute."
+"Since July 2010, the Almaty Institute of Power Engineering and "
+"Telecommunications received the status of a university with the "
+"right to prepare postgraduates and doctoral students of PhD and "
+"a new name – the non-profit joint-stock company Almaty University "
+"of Power Engineering and Telecommunications (AUPET)."
+"AUPET is one of the few universities in Kazakhstan that trains "
+"highly qualified specialists in energy, telecommunications and "
+"IT-technologies in the entire region of Central Asia. The university "
+"trains specialists in the specialties of college, undergraduate, "
+"graduate and doctoral studies PhD."
 
 #: .\aues_portal\templates\html\department.html:17
 msgid "Список преподавателей кафедры"
-msgstr "Кафедра оқытушыларының тізімі"
+msgstr "List of teachers of department"
 
 #: .\aues_portal\templates\html\department.html:41
 #, python-format
 msgid "Список групп кафедры %(depar)s"
-msgstr "%(depar)s кафедраның топтар тізімі"
+msgstr "List of groups of %(depar)s department"
 
 #: .\aues_portal\templates\html\department.html:51
 #: .\aues_portal\templates\html\groups.html:23
 msgid "Группы с первым курсом обучения"
-msgstr "Бірінші курс топтары"
+msgstr "First year groups"
 
 #: .\aues_portal\templates\html\department.html:63
 #: .\aues_portal\templates\html\groups.html:35
 msgid "Группы со вторым курсом обучения"
-msgstr "Екінші курс топтары"
+msgstr "Second year groups"
 
 #: .\aues_portal\templates\html\department.html:75
 #: .\aues_portal\templates\html\groups.html:47
 msgid "Группы с третьим курсом обучения"
-msgstr "Үшінші курс топтары"
+msgstr "Third year groups"
 
 #: .\aues_portal\templates\html\department.html:87
 #: .\aues_portal\templates\html\groups.html:59
 msgid "Группы с четвертым курсом обучения"
-msgstr "Төртінші курс топтары"
+msgstr "Fourth year groups"
 
 #: .\aues_portal\templates\html\departments.html:12
 #: .\aues_portal\templates\html\institut.html:11
 msgid "Кафедры института"
-msgstr "Институттың кафедралары"
+msgstr "Departmets of the institute"
 
 #: .\aues_portal\templates\html\doc_add.html:17
 #: .\aues_portal\templates\html\doc_upd.html:17
 msgid "Тип документа"
-msgstr "Құжат түрі"
+msgstr "Type of document"
 
 #: .\aues_portal\templates\html\doc_add.html:28
 msgid "Выбрать документ"
-msgstr "Құжатты тандау"
+msgstr "Select document"
 
 #: .\aues_portal\templates\html\doc_add.html:35
 #: .\aues_portal\templates\html\doc_upd.html:61
 #: .\aues_portal\templates\html\user.html:76
 msgid "Сохранить"
-msgstr "Үнемдеу"
+msgstr "Save"
 
 #: .\aues_portal\templates\html\doc_upd.html:49
 msgid "На данный момент:"
-msgstr "Қазіргі уақытта"
+msgstr "For now :"
 
 #: .\aues_portal\templates\html\doc_upd.html:54
 msgid "Выбрать новый документ"
-msgstr "Жана құжат тандау"
+msgstr "Select new document"
 
 #: .\aues_portal\templates\html\documents.html:5
 msgid "Добавить документ"
-msgstr "Құжатты қосу"
+msgstr "Add document"
 
 #: .\aues_portal\templates\html\documents.html:8
 msgid "Описание"
-msgstr "Сипаты"
+msgstr "Description"
 
 #: .\aues_portal\templates\html\documents.html:10
 msgid "Название файла"
-msgstr "Файлдың аты"
+msgstr "File name"
 
 #: .\aues_portal\templates\html\documents.html:11
 #: .\aues_portal\templates\html\documents.html:28
 msgid "Изменить"
-msgstr "Өзгерту"
+msgstr "Change"
 
 #: .\aues_portal\templates\html\documents.html:12
 msgid "Удалить"
-msgstr "Өшірү"
+msgstr "Delete"
 
 #: .\aues_portal\templates\html\group.html:10
 msgid "Эдвайзер: "
-msgstr "Эдвайзер: "
+msgstr "Adviser: "
 
 #: .\aues_portal\templates\html\group.html:14
 #: .\aues_portal\templates\html\pps.html:21
 #: .\aues_portal\templates\html\teacher.html:17
 msgid "Ф.И.О."
-msgstr "Аты-жөні"
+msgstr "Full name"
 
 #: .\aues_portal\templates\html\group.html:15
 #: .\aues_portal\templates\html\pps.html:23
 msgid "Личная страница"
-msgstr "Жеке бет"
+msgstr "Personal page"
 
 #: .\aues_portal\templates\html\group.html:22
 #: .\aues_portal\templates\html\pps.html:32
 msgid "перейти"
-msgstr "көру"
+msgstr "view"
 
 #: .\aues_portal\templates\html\instituts.html:12
 msgid "Информация"
-msgstr "Ақпарат"
+msgstr "Information"
 
 #: .\aues_portal\templates\html\login.html:17
 msgid "Имя пользователя"
-msgstr "Қолданушының аты"
+msgstr "Login"
 
 #: .\aues_portal\templates\html\login.html:23
 msgid "Пароль"
-msgstr "Құпия сөз"
+msgstr "Password"
 
 #: .\aues_portal\templates\html\main.html:8
 msgid "Главная страница"
-msgstr "Негізгі бет"
+msgstr "Main page"
 
 #: .\aues_portal\templates\html\main.html:14
 msgid "Страница кафедры"
-msgstr "Кафедраның беті"
+msgstr "Page of department"
 
 #: .\aues_portal\templates\html\main.html:16
 #: .\aues_portal\templates\html\navbar.html:28
 msgid "Преподавательский состав"
-msgstr "Оқытушылар құрамы"
+msgstr "Teaching staff"
 
 #: .\aues_portal\templates\html\main.html:18
 msgid "Личная страница сотрудника"
-msgstr "Қызметкердің жеке беті"
+msgstr "Employee's personal page"
 
 #: .\aues_portal\templates\html\main.html:20
 msgid "Личная страница студента"
-msgstr "Студенттің жеке беті"
+msgstr "Student personal page"
 
 #: .\aues_portal\templates\html\main.html:22
 #: .\aues_portal\templates\html\main.html:28
 #: .\aues_portal\templates\html\navbar.html:41
 msgid "Мой профиль"
-msgstr "Менің профилім"
+msgstr "My profile"
 
 #: .\aues_portal\templates\html\main.html:24
 #: .\aues_portal\templates\html\navbar.html:34
 msgid "Список групп"
-msgstr "Топтардың тізімі"
+msgstr "List of groups"
 
 #: .\aues_portal\templates\html\main.html:30
 msgid "Список документов"
-msgstr "Құжаттар тізімі"
+msgstr "List of documents"
 
 #: .\aues_portal\templates\html\main.html:32
 msgid "Добавление документа"
-msgstr "Құжаттарды қосу"
+msgstr "Add document"
 
 #: .\aues_portal\templates\html\main.html:34
 msgid "Изменение документа"
-msgstr "Құжаттарды өзгерту"
+msgstr "Change document"
 
 #: .\aues_portal\templates\html\main.html:36
 msgid "Страница входа"
-msgstr "Кіру беті"
+msgstr "Login"
 
 #: .\aues_portal\templates\html\navbar.html:13
 msgid "Главная"
-msgstr "Негізгі бет"
+msgstr "Main"
 
 #: .\aues_portal\templates\html\navbar.html:58
 #, python-format
 msgid "Вы авторизованы как %(user)s"
-msgstr "Cіз %(user)s ретінде авторизация жасадыныз"
+msgstr "You are logged in as %(user)s"
 
 #: .\aues_portal\templates\html\navbar.html:59
 msgid "Выйти"
-msgstr "Шығу"
+msgstr "Sign out"
 
 #: .\aues_portal\templates\html\navbar.html:61
 msgid "Вы авторизованы как Гость"
-msgstr "Cіз Қонақ ретінде авторизация жасадыныз"
+msgstr "You are logged in as Guest"
 
 #: .\aues_portal\templates\html\navbar.html:62
 msgid "Войти"
-msgstr "Кіру"
+msgstr "Sign in"
 
 #: .\aues_portal\templates\html\pps.html:22
 #: .\aues_portal\templates\html\teacher.html:20
 #: .\aues_portal\templates\html\user.html:41
 msgid "Должность"
-msgstr "Ұстаным"
+msgstr "Post"
 
 #: .\aues_portal\templates\html\teacher.html:67
 msgid "Сканы дипломов"
-msgstr "Дипломадар сканы"
+msgstr "Scans of diplomas"
 
 #: .\aues_portal\templates\html\teacher.html:97
 msgid "Сканы сертификатов"
-msgstr "Сертификаттар сканы"
+msgstr "Certificate scans"
 
 #: .\aues_portal\templates\html\teacher.html:127
 msgid "Оттиски статей"
-msgstr "Мақаладан алған әсер"
+msgstr "Reprints of articles"
 
 #: .\aues_portal\templates\html\teacher.html:156
 msgid "Прочие заслуги"
-msgstr "Басқа марапаттар"
+msgstr "Other merits"
 
 #: .\aues_portal\templates\html\user.html:63
 msgid "Выбрать новое изображение"
-msgstr ""
+msgstr "Choose a new image"
 
 #: .\aues_portal\templates\html\user.html:72
 msgid "Изменить список документов"
-msgstr "Құжаттар тізімі"
+msgstr "Change the list of documents"
